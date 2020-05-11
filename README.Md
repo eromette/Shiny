@@ -1,4 +1,4 @@
-*Projet Shiny*  
+**Projet Shiny**  
 
 - lire de la doc  
 - comprendre comment ça marche  
