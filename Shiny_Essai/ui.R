@@ -1,10 +1,14 @@
 library(shiny)
+library(shinyjs)
+
+#colonne : [,X]
+#ligne : [X,]
 
 ui <- fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100)
-    ),
-    mainPanel(plotOutput("distPlot"))
-  )
+  #useShinyjs(),                                       
+  #extendShinyjs(text = jsResetCode), 
+  #radioButtons("Chx",phrase,mot),
+  radioButtons("Chx",sample(dataLimP$Phrases,1),sample(dataLimM$Mots,4)),
+  actionButton("qsuiv","Question suivante")
+  
 )
