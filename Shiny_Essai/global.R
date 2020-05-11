@@ -1,5 +1,4 @@
 library(shiny)
-library(shinyjs)
 
 setwd("C:/Users/axelf/Desktop/Codage/OPEN/GitHub/Shiny/Shiny_Essai")
 #jsResetCode <- "shinyjs.reset = function() {history.go(0)}"
