@@ -14,7 +14,7 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                style="color:green", 
                                                align="center"),
                          
-                                       column(3,offset=1,
+                                       column(3,
                                               sidebarPanel(width=80,
                                                            
                                                            tags$h2("Jeu",
@@ -24,28 +24,33 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                            radioButtons("Chx",
                                                                         sample(dataLimP$Phrases,1),
                                                                         sample(dataLimM$Mots,4),
-                                                                        selected = 1),
+                                                                        selected = 1
+                                                                        ),
                                                            
                                                            actionButton("qsuiv",
-                                                                        "Question suivante",
+                                                                        "Nouvelle donne",
                                                                         align="center"),
                                                            )
                                               ),
                                        
-                                       column(3,offset=4,
+                                       column(5,offset=4,
                                               sidebarPanel(width=200,
                                              
                                                            tags$h3("Phrases enregistrées",
                                                                    style="color:blue",
                                                                    align="center"),                                            
                                                            ),
-                                              textOutput("phraseReg")
+                                              verbatimTextOutput("phraseReg"),
+                                              verbatimTextOutput("phraseChx"),
+                                              verbatimTextOutput("phraseAlea")
                                               ),
                                        ),
                                        
                                      fluidRow(
                                        column(12,offset=60,
-                                              actionButton("register","Enregistrer la phrase")
+                                              actionButton("register","Enregistrer la phrase"),
+                                              actionButton("testChx","Tester une phrase avec le choix"),
+                                              actionButton("aleat","Tester une phrase aléatoire")
                                               )
                                        )
                             
