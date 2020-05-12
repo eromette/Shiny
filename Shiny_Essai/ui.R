@@ -39,30 +39,31 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                                    align="center"),                                            
                                                            )
                                               ),
+                                     ),
                                        
-                                       fluidRow(
+                                     fluidRow(
                                        column(12,offset=60,
                                               actionButton("register","Enregistrer la phrase")
                                               )
                                        )
                                      )
-                                     ),
+                            ),
                             
-                            tabPanel("Paramètres",
+                tabPanel("Paramètres",
                                      
-                                     tags$h1("Paramétrage du jeu",
-                                             style="color:black", 
-                                             align="center"),
-                                     
-                                     column(3,offset=15,
-                                     
-                                            sliderInput("selectNbMot", 
-                                                        "Nombre de mot disponibles :", 
-                                                        value = 4,
-                                                        min = 2, 
-                                                        max = 7)
-                                            )
-                                     )
-                            )
+                         tags$h1("Paramétrage du jeu",
+                                 style="color:black", 
+                                 align="center"),
+                         
+                         column(3,offset=15,
+                                            
+                                sliderInput("selectNbMot", 
+                                            "Nombre de mot disponibles :", 
+                                            value = 4,
+                                            min = 2, 
+                                            max = 7)
+                                )
+                         )
                 )
+
     
