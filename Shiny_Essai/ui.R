@@ -7,7 +7,7 @@ library(shinythemes)
 ui <- fluidPage(theme=shinytheme("simplex"),
     
                 tabsetPanel(id="tabset",
-                
+                            
                             tabPanel("Jeu",
                                      fluidRow(
                                        tags$h1("Limite Limite Isarien",
@@ -39,31 +39,32 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                                    align="center"),                                            
                                                            )
                                               ),
-                                     ),
+                                       ),
                                        
                                      fluidRow(
                                        column(12,offset=60,
                                               actionButton("register","Enregistrer la phrase")
                                               )
                                        )
-                                     )
-                            ),
                             
-                tabPanel("Paramètres",
-                                     
-                         tags$h1("Paramétrage du jeu",
-                                 style="color:black", 
-                                 align="center"),
+                                     ),
+                
+                            tabPanel("Paramètres",
                          
-                         column(3,offset=15,
-                                            
-                                sliderInput("selectNbMot", 
-                                            "Nombre de mot disponibles :", 
-                                            value = 4,
-                                            min = 2, 
-                                            max = 7)
-                                )
-                         )
+                                     tags$h1("Paramétrage du jeu",
+                                             style="color:black",
+                                             align="center"),
+                         
+                                     column(3,offset=15,
+                                
+                                            sliderInput("selectNbMot", 
+                                                        "Nombre de mot disponibles :", 
+                                                        value = 4,
+                                                        min = 2, 
+                                                        max = 7)
+                                            )
+                                     )
+                            )
                 )
 
     
