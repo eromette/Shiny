@@ -7,11 +7,20 @@ server <- function(input, output,session) {
                                   choices =sample(dataLimM$Mots,input$selectNbMot) 
                                   )
                )
+  
   observeEvent(input$selectNbMot,
                updateRadioButtons(session,"Chx",
                                   choices = sample(dataLimM$Mots,input$selectNbMot) 
                                   )   
                )
+  
+  observeEvent(input$register,
+               #texte = texte & "test1",
+               output$phraseReg <- renderText({
+                 paste0(1, "test")
+               })
+               )
+  
   }
 
 

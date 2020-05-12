@@ -23,7 +23,8 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                            
                                                            radioButtons("Chx",
                                                                         sample(dataLimP$Phrases,1),
-                                                                        sample(dataLimM$Mots,4)),
+                                                                        sample(dataLimM$Mots,4),
+                                                                        selected = 1),
                                                            
                                                            actionButton("qsuiv",
                                                                         "Question suivante",
@@ -37,7 +38,8 @@ ui <- fluidPage(theme=shinytheme("simplex"),
                                                            tags$h3("Phrases enregistrées",
                                                                    style="color:blue",
                                                                    align="center"),                                            
-                                                           )
+                                                           ),
+                                              textOutput("phraseReg")
                                               ),
                                        ),
                                        

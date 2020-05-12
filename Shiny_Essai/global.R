@@ -6,6 +6,8 @@ dataLimM <- read.csv("LimiteMot.csv",sep=";",header=TRUE);dataLimM
 source('ui.R', local = TRUE)
 source('server.R')
 
+texte = ""
+
 shinyApp(
   ui = ui,
   server = server
