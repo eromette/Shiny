@@ -1,9 +1,21 @@
 library(shiny)
 
 server <- function(input, output,session){
+  
+  observe(
+    output$textQ <- renderText(sample(dataLimP$Phrases,1)
+                               )
+    )
+  
   observeEvent(input$qsuiv,
+                output$textQ <- renderText(sample(dataLimP$Phrases,1)
+                                           ),
+                )
+  
+  observeEvent(input$qsuiv,
+               
                updateRadioButtons(session,"Chx",
-                                  label =sample(dataLimP$Phrases,1),
+                                  label = NULL,
                                   choices =sample(dataLimM$Mots,input$selectNbMot) 
                                   )
                )
